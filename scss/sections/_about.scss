@@ -1,0 +1,101 @@
+@import './../helpers/mixins';
+
+.about{
+    background-color: #FFFFFF;
+    height: 500px;
+    display: flex;
+    &_desciption{
+        margin-top: 94px;
+        width: 445px;
+        .title{
+            margin: 0;
+            margin-top: 46px;
+            color: #000000;
+            height: 110px;
+        }
+        p{
+            margin-top: 25px;
+            @include font(14px, normal, 20px);
+            color: #000000;
+            text-align: justify;
+        }
+        a{
+            margin-top: 25px;
+            @include font(14px, normal, 20px);
+            text-align: justify;
+            color: #ED4C5C;
+        }
+    }
+    &_video{
+        margin-top: 94px;
+        margin-left: 125px;
+        position: relative;
+        width: 445px;
+        height: 310px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        &::after {
+            content: url('./../../img/play.png');
+            position: absolute;
+            top: 123px;
+            left: -33px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .about_desciption{
+        width: 45%;
+    }
+    .about_video{
+        margin-left: 70px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .about{
+        height: 400px;
+    }
+    .about_desciption{
+        margin-top: 70px;
+        .title{
+            margin-top: 0;
+            height: auto;
+        }
+    }
+    .about_video{
+        margin-top: 70px;
+        margin-left: 55px;
+        width: 50%;
+        height: 55%;
+        &::after {
+            top: 85px;
+            left: -33px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .about{
+        height: 350px;
+    }
+    .about_desciption{
+        width: 55%;
+        margin-top: 55px;
+        .title{
+            margin-top: 0;
+            height: auto;
+        }
+    }
+    .about_video{
+        margin-top: 80px;
+        margin-left: 30px;
+        width: 40%;
+        height: 43%;
+        &::after {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+@import './../helpers/mixins';
+
+footer{
+    background-color: #FAFAFA;
+    padding-top: 85px;
+    height: 435px;
+    box-sizing: border-box;
+    .footer-list{
+        display: flex;
+        justify-content: space-between;
+        li{
+            h5{
+                @include font(18px, bold, 22px);
+                color: #101010;
+                margin: 0;
+                margin-bottom: 35px;
+            }
+            span{
+                display: block;
+                width: 100%;
+                @include font(12px, normal, 18px);
+                color: #101010;
+            }
+            .services-list li a{
+                @include font(12px, normal, 19px);
+                text-transform: capitalize;
+                color: #000000;
+            }
+            .footer-email{
+                display: block;
+                width: 100%;
+                @include font(12px, normal, 14px);
+                color: #101010;
+                margin-bottom: 10px;
+            }
+            .footer-phone{
+                display: block;
+                width: 100%;
+                @include font(12px, normal, 14px);
+                color: #121212;
+                margin-bottom: 20px;
+            }
+            .footer-social{
+                display: flex;
+                a{
+                    margin-right: 10px;
+                }
+            }
+            .footer-card{
+                display: block;
+                width: 215px;
+                height: 31px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .data{
+        display: block;
+        margin-top: 85px;
+        @include font(12px, normal, 14px);
+        color: #101010;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .footer-list{
+        flex-wrap: wrap;
+        li{
+            margin-bottom: 20px;
+            .footer-title{
+                margin-bottom: 10px;
+
+            }
+            .services-list li{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@import './../helpers/mixins';
+
+.contacts{
+    background-color: #FFFFFF;
+    height: 380px;
+    padding-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    &_description{
+        width: 445px;
+        .title{
+            height: 107px;
+        }
+        p{
+            @include font(14px, normal, 20px);
+            color: #000000;
+            text-align: justify;
+            margin: 0;
+        }
+    }
+    &_form{
+        width: 540px;
+        .form-input{
+            border: 1px solid #333333;
+            border-radius: 6px;
+            box-sizing: border-box;
+            height: 60px;
+            width: 100%;
+            padding-left: 30px;
+            margin-bottom: 25px;
+        }
+        &-initials{
+            display: flex;
+            justify-content: space-between;
+            .form-input{
+                width:47%;
+            }
+        }
+        .form-button{
+            background: #ED4C5C;
+            border: 1.5px solid #ED4C5C;
+            border-radius: 6px;
+            text-align: center;
+            width: 160px;
+            height: 50px;
+            @include font(14px, normal, 17px);
+            text-transform: uppercase;
+            color: #FFFFFF; 
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .contacts_description{
+        width: 45%;
+    }
+    .contacts_form{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .contacts{
+        height:250px;
+        padding-top: 60px;
+        &_form{
+            .form-input,.form-button{
+                height: 40px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .contacts_description{
+        .title{
+            height: auto;
+            margin-bottom: 20px;
+            
+        }
+    }
+    
+}

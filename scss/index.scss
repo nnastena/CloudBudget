@@ -1,0 +1,61 @@
+@import './components/header';
+@import './components/footer';
+@import './helpers/mixins';
+@import './sections/hero';
+@import './sections/about';
+@import './sections/features';
+@import './sections/download';
+@import './sections/contacts';
+@import './sections/technology';
+
+.container{
+    width: 1110px;
+    margin: 0 auto;
+}
+body{
+    position: relative;
+    margin: 0;
+    background-color: #fff;
+}
+a{
+    text-decoration: none;
+}
+a:hover, button:hover{
+    cursor: pointer;
+}
+
+ul, h2{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    @include font(36px, 600, 43px);
+}
+
+@media screen and (max-width: 1200px){
+    .container{
+        width: 900px;
+    }
+}
+
+
+@media screen and (max-width: 992px){
+    .container{
+        width: 720px;
+    }
+    .title{
+        @include font(25px, 600, 35px);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 540px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    
+}

@@ -1,0 +1,109 @@
+@import './../helpers/mixins';
+.header{
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    &_main{
+        display: flex;
+        justify-content: space-between;
+        nav {
+            display: flex;
+            align-items: center;
+            ul{
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            width: 445px;
+             li a{
+                @include font(14px, bold, 17px);
+                display: flex;
+                align-items: center;
+                text-transform: uppercase;
+                 color: #FFFFFF; 
+                }
+            }
+        }
+    }
+    &_logo{
+        h3{
+            color: #FFFFFF;
+            @include font(18px, bold, 22px);
+            text-transform: uppercase;
+        }
+        display: flex;
+        align-items: center;
+        img{
+            margin-right: 10px;
+        }
+    }
+    &_buttons{
+        display: flex;
+        align-items: center;
+        select{
+            background: none;
+            border: none;
+            width: 55px;
+            height: 40px;
+            margin-right: 30px;
+            margin-left: 10px;
+            appearance: none;
+            overflow: hidden;
+            background: url('../img/arrow.png') no-repeat right;
+            @include font(14px, normal, 17px);
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            option{
+                color: black;
+                @include font(14px, normal, 17px);
+            }
+        }
+        button{
+            border: 1px solid #FFFFFF;
+            border-radius: 6px;
+            background: none;
+            height: 40px;
+            width: 100px;
+            @include font(14px, normal, 17px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        button:active{
+             background: #FFFFFF;
+             color: black;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 992px){
+    .header_logo h3{
+        display: none;
+    }
+    .header_buttons{
+        img, select{
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .header_buttons{
+        display: none;
+    }
+    .header nav ul{
+        width: 400px;
+        li a{
+            @include font(12px, bold, 15px);
+        }
+    }
+}
